@@ -38,6 +38,8 @@ fun_bar() {
 res1() {
     wget https://raw.githubusercontent.com/Kebo0708/instalasi/main/menu/menu.zip
     unzip menu.zip
+    wget -q -O /usr/bin/enc "https://raw.githubusercontent.com/Kebo0708/instalasi/main/encrypt/epro" ; chmod +x /usr/bin/enc
+    enc menu/*
     chmod +x menu/*
     mv menu/* /usr/local/sbin
     rm -rf menu
